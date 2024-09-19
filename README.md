@@ -23,6 +23,15 @@ sudo apt install eog    # 이미지 열기 도구 설치
 ```
 <br/>
 
+**음원과 이미지 위치**  
+ ```bash
+username@servername:~/project$ tree
+.
+├── image.png
+└── Sound.wav
+```
+<br/>
+
 **Crontab 명령어**
  ```bash
 sudo crontab -e   # 루트 사용자의 crontab 파일을 생성 및 편집
@@ -33,8 +42,8 @@ sudo crontab -l   # 루트 사용자의 crontab 파일 내용 표시
 **Crontab 편집**
 ```crontab
 # 평일 오후 8시 귀신 사진 열기와 스산한 BGM 재생
-0 20 * * 1-5 DISPLAY=localhost:10.0 eog $HOME/image.png 
-0 20 * * 1-5 aplay $HOME/Sound.wav
+0 20 * * 1-5 DISPLAY=localhost:10.0 eog $HOME/project/image.png
+0 20 * * 1-5 aplay  $HOME/project/Sound.wav
 
 # 평일 오후 9시 시스템 자동 종료
 0 21 * * 1-5 /sbin/shutdown -h now
