@@ -33,7 +33,7 @@ sudo crontab -l   # 루트 사용자의 crontab 파일 내용 표시
 **Crontab 편집**
 ```crontab
 # 평일 오후 8시 귀신 사진 열기와 스산한 BGM 재생
-0 20 * * 1-5 DISPLAY=localhost:10.0 eog /home/username/image.png 
+0 20 * * 1-5 DISPLAY=localhost:10.0 eog $HOME/image.png 
 0 20 * * 1-5 aplay $HOME/Sound.wav
 
 # 평일 오후 9시 시스템 자동 종료
