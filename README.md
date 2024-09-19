@@ -14,7 +14,7 @@
 <br/>
 
 ## 🔧 Crontab 작업 예약 가이드
-설치해야 할 패키지 <br/>
+**설치해야 할 패키지**  <br/>
  - alsa-utils: 음악을 재생하는 도구.
  - eog: 이미지를 기본 프로그램으로 여는 명령어.
  ```bash
@@ -23,6 +23,14 @@ sudo apt install eog    # 이미지 열기 도구 설치
 ```
 <br/>
 
+**Crontab 명령어**
+ ```bash
+sudo crontab -e   # 루트 사용자의 crontab 파일을 생성 및 편집
+sudo crontab -l   # 루트 사용자의 crontab 파일 내용 표시
+```
+<br/>
+
+**Crontab 편집**
 ```crontab
 # 평일 오후 8시 귀신 사진 열기와 스산한 BGM 재생
 0 20 * * 1-5 DISPLAY=localhost:10.0 eog /home/username/image.png 
